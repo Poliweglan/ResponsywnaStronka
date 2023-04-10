@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <title>Rsponsywna Stronka</title>
@@ -7,26 +7,35 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="col-d-8 container">
-        <div class="col-d-8 picture_menu">
-            <div class="col-d-8 menu">
-                Menu
-            </div>
-        </div>
-        <div class="col-d-3 left_articles"></div>
-        <div class="col-d-5 content"></div>
-        <div class="col-d-8 footer">
-            Footer
+    <div class="col-d-8 header">
+        <div class="header_text">
+            <h1>Grubosze</h1>
+            <h3>Drzewka szczęścia</h3>
         </div>
     </div>
+    <div class="col-d-8 navbar">
+        Menu
+    </div>
+    <div class="col-d-5 content"></div>
+    <div class="col-d-8 footer">
+        Footer
+    </div>
 
-    <div class="col-d-1 test"><h1>Test 1</h1></div>
-    <div class="col-d-2 test"><h1>Test 2</h1></div>
-    <div class="col-d-3 test"><h1>Test 3</h1></div>
-    <div class="col-d-4 test"><h1>Test 4</h1></div>
-    <div class="col-d-5 test"><h1>Test 5</h1></div>
-    <div class="col-d-6 test"><h1>Test 6</h1></div>
-    <div class="col-d-7 test"><h1>Test 7</h1></div>
-    <div class="col-d-8 test"><h1>Test 8</h1></div>
+<script>
+    let navbar = document.getElementsByClassName("navbar")[0];
+    let navbarPosition = navbar.getBoundingClientRect().top;
+
+    function stickyNavbar() {
+        let scrollPosition = window.scrollY;
+        console.log("scrollPosition", scrollPosition);
+
+        if (scrollPosition > navbarPosition) {
+            navbar.classList.add('sticky');
+        } else {
+            navbar.classList.remove('sticky');
+        }
+    }
+    window.addEventListener('scroll', stickyNavbar);
+</script>
 </body>
 </html>
