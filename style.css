@@ -44,7 +44,6 @@ h1, blockquote, article {
     text-align: center;
     height: 200px;
     width: 1000px;
-
     align-items: center;
     justify-content: center;
 }
@@ -101,8 +100,22 @@ blockquote::before {
     height: 10vw;
 }
 
-.leftContent {background-color: #FEEFDD; padding-left: 17%; padding-right: 10px;}
-.rightContent  {background-color: #A7D1CF; padding-right: 17%; padding-left: 10px;}
+.rightPic {
+    display: inline-flex;
+    text-align: justify;
+    align-items: center;
+}
+.rightPic p {
+    padding-right: 20px;
+}
+
+.rightPic img {
+    border: 2px solid #FEEFDD;
+    height: 10vw;
+}
+
+.leftContent {background-color: #FEEFDD; padding-left: 10%; padding-right: 10px;}
+.rightContent  {background-color: #A7D1CF; padding-right: 10%; padding-left: 10px;}
 
 .leftContent strong {color: #A7D1CF; font-size: 40px; font-style: normal;}
 .rightContent strong {color: #FEEFDD; font-size: 40px; font-style: normal;}
@@ -118,15 +131,116 @@ blockquote::before {
 .footer {
     border-top: 10px solid;
     border-bottom: 10px solid;
-    padding: 160px;
+    padding: 160px 0;
     text-align: center;
     background-color: #50B2C0;
     color: #FEEFDD;
-    font-size: 30px;
+    font-size: 2vw;
     font-style: italic;
 }
 
 .footer {
     /*border-color: #FF4000;*/
     border-color: #FF986F;
+}
+
+@media only screen and (min-width: 481px) and (max-width: 640px)  {
+    .header {height: 300px;}
+
+    .header h1.logo_text {
+        transform: rotate(12deg);
+        font-size: 40px;
+        height: 150px;
+        width: 260px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .leftContent {padding-left: 10px; padding-right: 10px;}
+    .rightContent  {padding-right: 10px; padding-left: 10px;}
+
+    .leftPic {display: block;}
+    .leftPic p {padding: 0 0 0 0;}
+    .leftPic img {
+        display: block;
+        height: 28vw;
+    }
+
+    .rightPic {display: block;}
+    .rightPic p {padding: 0 0 0 0;}
+    .rightPic img {
+        display: block;
+        height: 28vw;
+        padding: 0 0 0 0;
+        margin: 0;
+    }
+
+    .quote {font-size: 20px;}
+
+    .footer {
+        padding: 90px 0;
+        text-align: center;
+        background-color: #50B2C0;
+        color: #FEEFDD;
+        font-size: 3vw;
+        font-style: italic;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .col-pc-6 {width: 100%;}
+    .header {height: 300px;}
+
+    .header h1.logo_text {
+        transform: rotate(0deg);
+        font-size: 40px;
+        height: 150px;
+        width: 200px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .quote {
+        padding: 50px 20px 20px 20px;
+        font-size: 20px;
+    }
+
+    blockquote {max-width: 1400px;}
+
+    blockquote::before {
+        font-size: 6rem;
+        margin: -3.5rem 0 0 -1rem;
+    }
+
+    .content {
+        font-size: 20px;
+        display: block;
+        text-align: justify;
+    }
+    .content p {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin: 0;
+    }
+
+    .leftContent {padding-left: 10px; padding-right: 10px;}
+    .rightContent  {padding-right: 10px; padding-left: 10px;}
+
+    .leftPic {display: block;}
+    .leftPic p {padding: 0 0 10px 0;}
+    .leftPic img {
+        display: block;
+        height: 59vw;
+    }
+
+    .rightPic {display: block;}
+    .rightPic p {padding: 0 0 10px 0;}
+    .rightPic img {
+        display: block;
+        height: 59vw;
+    }
+
+    .footer {
+        padding: 70px 0;
+    }
 }
