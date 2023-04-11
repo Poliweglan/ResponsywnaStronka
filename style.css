@@ -241,6 +241,7 @@ blockquote::before {
     }
 
     .footer {
+        font-size: 3vw;
         padding: 70px 0;
     }
 }
