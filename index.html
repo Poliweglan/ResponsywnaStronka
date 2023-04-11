@@ -1,41 +1,11 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Rsponsywna Stronka</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoremResponsivum</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="col-d-8 header">
-        <div class="header_text">
-            <h1>Grubosze</h1>
-            <h3>Drzewka szczęścia</h3>
-        </div>
-    </div>
-    <div class="col-d-8 navbar">
-        Menu
-    </div>
-    <div class="col-d-5 content"></div>
-    <div class="col-d-8 footer">
-        Footer
-    </div>
 
-<script>
-    let navbar = document.getElementsByClassName("navbar")[0];
-    let navbarPosition = navbar.getBoundingClientRect().top;
-
-    function stickyNavbar() {
-        let scrollPosition = window.scrollY;
-        console.log("scrollPosition", scrollPosition);
-
-        if (scrollPosition > navbarPosition) {
-            navbar.classList.add('sticky');
-        } else {
-            navbar.classList.remove('sticky');
-        }
-    }
-    window.addEventListener('scroll', stickyNavbar);
-</script>
 </body>
 </html>
